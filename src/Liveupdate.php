@@ -26,6 +26,12 @@ class Liveupdate extends Field
         return $this->withMeta(['id' => $id, 'nova_path' => Config::get('nova.path')]);
     }
 
+    public function type($value) {
+        return $this->withMeta([
+            'fieldType' => $value ? $value : 'text'
+        ]);
+    }
+
     public function select($values)
     {
         return $this->withMeta([

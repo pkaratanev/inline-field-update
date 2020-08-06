@@ -1,7 +1,7 @@
 <template>
     <div class="relative flex items-stretch">
         <input
-            :id="field.name"
+            :id="field.name + resourceId"
             type="text"
             class="w-full form-control form-input form-input-bordered live-update"
             :placeholder="field.name"
@@ -11,13 +11,13 @@
         />
 
         <select
-            :id="field.name"
-            class="w-full form-control form-input form-input-bordered live-update"
+            :id="field.name + resourceId"
+            class="w-full form-control form-input form-input-bordered live-update custom-live-select-field"
             v-model="value"
             @change="save"
             v-else
         >
-            <option v-for="(item, index) in field.selectValues" :key="index" >
+            <option v-for="(item, index) in field.selectValues" :key="index">
                 {{item}}
             </option>
         </select>

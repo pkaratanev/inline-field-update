@@ -1,8 +1,8 @@
 <template>
     <div class="relative flex items-stretch">
         <input
-            :id="field.name + resourceId"
-            :type="field.type"
+            :id="field.name + field.id"
+            :type="field.fieldType"
             class="w-full form-control form-input form-input-bordered live-update"
             :placeholder="field.name"
             v-model="value"

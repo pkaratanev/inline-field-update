@@ -42,7 +42,7 @@ export default {
     props: ['resourceName', 'resourceId', 'field'],
     computed: {
         isSelect() {
-            return !!this.field.selectValues
+            return !this.field.selectValues
         }
     },
     methods: {
